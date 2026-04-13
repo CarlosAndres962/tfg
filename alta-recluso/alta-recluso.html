@@ -1,0 +1,10 @@
+<h2>Alta de Recluso</h2>
+
+<form (ngSubmit)="AltaRecluso()">
+  <input type="text" [(ngModel)]="recluso.nombre" name="nombre" placeholder="Nombre" required>
+  <input type="text" [(ngModel)]="recluso.apellido" name="apellido" placeholder="Apellido" required>
+  <input type="number" [(ngModel)]="recluso.edad" name="edad" placeholder="Edad" required>
+  <input type="text" [(ngModel)]="recluso.delito" name="delito" placeholder="Delito" required>
+
+  <button type="submit">Dar de alta</button>
+</form>

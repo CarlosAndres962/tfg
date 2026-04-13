@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-card">
+    
+    <div class="logo-shield-container">
+      <i class="fas fa-shield-alt logo-shield"></i>
+    </div>
+    <h2>Portal del visitante</h2>
+    <p class="subtitle">Gestión de accesos y citas</p>
+
+    <div [ngSwitch]="pasoActual">
+
+      <div *ngSwitchCase="'INICIO'" class="animate-in">
+        <span class="label-roles">Seleccione el trámite</span>
+        <div class="options-grid">
+          
+          <div class="option-card" (click)="forzarVista('REGISTRO')">
+            <i class="fas fa-user-plus"></i>
+            <div class="text-group">
+              <span class="title">Nuevo registro</span>
+              <span class="desc">Si es tu primera vez, solicita acceso aquí.</span>
+            </div>
+          </div>
+
+          <div class="option-card" (click)="forzarVista('ESPERA')">
+            <i class="fas fa-search"></i>
+            <div class="text-group">
+              <span class="title">Consultar estado</span>
+              <span class="desc">Verifica la aprobación de tu acceso.</span>
+            </div>
+          </div>
+
+          <div class="option-card" (click)="irAAltaVisita()">
+            <i class="fas fa-calendar-alt"></i>
+            <div class="text-group">
+              <span class="title">Solicitar cita</span>
+              <span class="desc">Agenda tu visita al centro.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'REGISTRO'"> ... </div>
+      <div *ngSwitchCase="'ESPERA'"> ... </div>
+
+    </div>
+  </div>
+</div>

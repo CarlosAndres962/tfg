@@ -1,0 +1,11 @@
+<h2>Modificar Recluso</h2>
+
+<form (ngSubmit)="modificarRecluso()">
+  <input type="number" [(ngModel)]="recluso.id" name="id" placeholder="ID" required>
+  <input type="text" [(ngModel)]="recluso.nombre" name="nombre" placeholder="Nombre">
+  <input type="text" [(ngModel)]="recluso.apellido" name="apellido" placeholder="Apellido">
+  <input type="number" [(ngModel)]="recluso.edad" name="edad" placeholder="Edad">
+  <input type="text" [(ngModel)]="recluso.delito" name="delito" placeholder="Delito">
+
+  <button type="submit">Modificar</button>
+</form>
